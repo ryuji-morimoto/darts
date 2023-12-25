@@ -1,0 +1,201 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+ 
+
+/* ダイアログボックスのスタイリング */
+#RoundChangeDialog {
+    width: 26em;
+    max-height: 50%;
+    background-color: rgba(255, 255, 255, 0.4); /* 背景色は白の半透明 */
+    backdrop-filter: blur(12px);                /* ぼかし */
+    border: solid 1px rgba(255, 255, 255, 0.4);
+    border-radius: 4px;
+    box-shadow: 0 0 24px 4px rgba(0, 0, 0, 0.4);
+    margin: auto;
+    padding: 0;
+}
+/* 背景 */
+#RoundChangeDialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+/* ボディ */
+#RoundChangeDialog .body {
+    background-color: transparent; /* 背景色は透明 */
+    padding: 1em 2em;
+}
+/* フッタ */
+#RoundChangeDialog .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent; /* 背景色は透明 */
+    padding: 1em 2em;
+    position: sticky;
+    bottom: 0;
+}
+/* ボタン */
+#RoundChangeDialog .button {
+    border: outset 2px rgba(255, 255, 255, 0.4);
+    padding: 0.5em 4em;
+    border-radius: 6px;
+    cursor: pointer;
+}
+#RoundChangeDialog .button:hover {
+    backdrop-filter: blur(48px);
+}
+#RoundChangeDialog .button.ok {
+    background-color: transparent;
+}
+
+
+
+header {
+    height: 15vh;
+}
+
+div.GameName {
+    height: 100%;
+    width: 100%;
+}
+h1.GameName {
+    font-size: 4rem;
+    line-height: 15vh; /* headerのheightに合わせる */
+    padding-left: 1%;
+}
+
+
+
+main {
+    height: 77vh;
+    display: flex;
+    place-items: center;
+}
+.RoundScore {
+    width: 15%;
+    height: 100%;
+}
+.ListTitle {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 10%;
+}
+.ScrollBox {
+    width: 100%;
+    height: 90%;
+}
+/*スクロールバー非表示（Chrome・Safari）*/
+.ScrollBox::-webkit-scrollbar {
+    display:none;
+}
+.ScrollBox {
+    overflow: hidden;
+    overflow-y: scroll;
+}
+ol.RS {
+    counter-reset:number; /*数字をリセット*/
+    list-style-type: none!important; /*数字を一旦消す*/
+    padding:0;
+}
+li.RS {
+    font-size: 1.3rem;
+    height: 2rem;
+    height: 100%;
+}
+ol.RS li.RS {
+    color: white;
+    font-family: 'Avenir','Arial Black','Arial',sans-serif;
+    font-size: 2rem;
+    position: relative;
+    padding-top: 0.5rem;
+    padding-right: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 3.2rem;
+    line-height: 1.5em;
+    background: gray;
+    border-left : solid 2.2rem white;
+    border-bottom: solid 0.05rem black;
+    border-top: solid 0.05rem black;
+    margin-bottom: 0.4rem;
+}
+ol.RS li.RS:before{
+    /* 以下数字をつける */
+    position: absolute;
+    counter-increment: number;
+    content: counter(number);
+    /*数字のデザイン変える*/
+    display:inline-block;
+    color: black; 
+    font-family: 'Avenir','Arial Black','Arial',sans-serif;
+    font-weight:bold;
+    font-size: 1.3rem;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: -2.2rem;
+    width: 2.2rem;
+    height: 1em;
+    line-height: 1;
+    text-align: center;
+}
+
+.ShowNumber {
+    display: grid;
+    place-items: center;
+    font-family: Arial Black;
+    font-size: 18rem;
+    height: 100%;
+    width: 65%;
+}
+
+.DartAndResult {
+    width: 20%;
+    height: 100%;
+}
+ul.DR {
+    font-family: 'Avenir','Arial Black','Arial',sans-serif;
+    font-size: 2.5rem;
+    list-style-type: none;
+}
+li.DR {
+    text-align: center;
+    line-height: 1.5; /*文の行高*/
+    padding-top: 1.1rem;
+    padding-bottom: 1.1rem;
+    padding-right: 0;
+    padding-left: 2.3rem; /*画像サイズに合わせる*/
+    background-image: url(image/DartIcon.jpg);
+    background-repeat: no-repeat;
+    background-size: 2.3rem; /*フォントサイズに合わせる*/
+    background-position: left center;
+    border-bottom: solid 0.05rem black;
+}
+
+
+
+div.HitNumBox {
+    height: 8vh;
+}
+input.HitNumBox {
+    caret-color: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(234, 234, 234);
+}
+
+::placeholder {
+	text-align: center;
+}
+
+input:focus,textarea:focus {
+ background-color:#ffffff;
+}
+
+input:focus::placeholder {
+	color: transparent;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>COUNT-UP</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <dialog id="RoundChangeDialog">
+        <div class="inner">
+            <div class="body">
+                <p>ROUND CHANGE...</p>
+            </div>
+            <div class="footer">
+                <button class="button ok" id="SkipButton">OK</button>
+            </div>
+        </div>
+    </dialog>
+
+    <header>
+        <div class="GameName">
+            <h1 class="GameName">COUNT-UP</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="RoundScore" id="RoundScore">
+            <div class="ListTitle">
+                <h3>ROUND SCORE</h3>
+            </div>
+            <div class="ScrollBox" id="ScrollBox">
+                <ol class="RS">
+                    <li class="RS" id="Round_1"></li>
+                    <li class="RS" id="Round_2"></li>
+                    <li class="RS" id="Round_3"></li>
+                    <li class="RS" id="Round_4"></li>
+                    <li class="RS" id="Round_5"></li>
+                    <li class="RS" id="Round_6"></li>
+                    <li class="RS" id="Round_7"></li>
+                    <li class="RS" id="Round_8"></li>
+                </ol>
+            </div>
+        </div> 
+
+        <div class="ShowNumber" id="ShowNumber"></div>
+
+        <div class="DartAndResult">
+            <div class="ListTitle">
+                <h3>DART & RESULT</h3>
+            </div>
+            <ul  class="DR">
+                <li class="DR" id="Dart_1"></li>
+                <li class="DR" id="Dart_2"></li>
+                <li class="DR" id="Dart_3"></li>
+            </ul>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="HitNumBox">
+            <input class="HitNumBox" type="text" id="HitNumber" placeholder="GAME START!    (Please click and hold here.)           ※Enter「1-」to change the game to 701.">
+        </div>
+    </footer>
+    
+    <script src="./script.js"></script>
+</body>
+</html>
